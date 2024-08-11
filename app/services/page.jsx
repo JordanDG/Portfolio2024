@@ -2,7 +2,7 @@
 
 // Metadata Workaround
 import Head from "next/head";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 // Imports
 import { BsArrowDownRight } from 'react-icons/bs';
@@ -40,9 +40,12 @@ const services = [
 import { motion } from 'framer-motion';
 
 const Services = () => {
+    const [title, setTitle] = useState("");
+
     useEffect(() => {
-        document.title = "JordanDG | Services ";
-      }, []);
+        // Client-side only logic
+        setTitle("JordanDG | Services");
+    }, []);
     return (
         <>
         <Head>

@@ -5,7 +5,7 @@ import { FiDownload } from "react-icons/fi";
 
 // Metadata Workaround
 import Head from "next/head";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 // Components //
 import Social from "@/components/Social";
@@ -14,8 +14,11 @@ import Stats from "@/components/Stats";
 import Competencies from "@/components/Competencies";
 
 const Home = () => {
+  const [title, setTitle] = useState("");
+
   useEffect(() => {
-    document.title = "JordanDG | Home ";
+      // Client-side only logic
+      setTitle("JordanDG | Home");
   }, []);
   return (
     <>

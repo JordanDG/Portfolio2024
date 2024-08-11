@@ -2,7 +2,7 @@
 
 // Metadata Workaround
 import Head from "next/head";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 // Icons
 import {FaHtml5, FaCss3, FaJs, FaReact, FaFigma, FaNodeJs, FaSass, FaWordpress, FaBuilding, FaGraduationCap, FaKeyboard, FaUser} from 'react-icons/fa';
@@ -179,9 +179,12 @@ import { ScrollArea } from '@/components/ui/scroll-area';
 import { motion } from 'framer-motion';
 
 const Resume = () => {
+    const [title, setTitle] = useState("");
+
     useEffect(() => {
-        document.title = "JordanDG | Resume ";
-      }, []);
+        // Client-side only logic
+        setTitle("JordanDG | Resume");
+    }, []);
     return (
         <>
         <Head>

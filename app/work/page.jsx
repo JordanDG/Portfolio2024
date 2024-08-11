@@ -2,7 +2,7 @@
 
 // Metadata Workaround
 import Head from "next/head";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 // Animation
 import {easeIn, motion} from 'framer-motion';
@@ -73,9 +73,12 @@ const Work = () => {
         setProject(projects[currentIndex]);
     }
 
+    const [title, setTitle] = useState("");
+
     useEffect(() => {
-        document.title = "JordanDG | Work ";
-      }, []);
+        // Client-side only logic
+        setTitle("JordanDG | Work");
+    }, []);
     return (
         <>
         <Head>

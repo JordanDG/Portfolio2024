@@ -2,7 +2,7 @@
 
 // Metadata Workaround
 import Head from "next/head";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 // Components
 import { Button } from "@/components/ui/button";
@@ -10,7 +10,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectGroup, SelectItem, SelectLabel, SelectTrigger, SelectValue } from "@/components/ui/select";
 // Icons
-import {FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from 'react-icons/fa';
+import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from 'react-icons/fa';
  
 const info = [
     {
@@ -33,13 +33,16 @@ const info = [
 import { motion } from "framer-motion";
 
 const Contact = () => {
+    const [title, setTitle] = useState("");
+
     useEffect(() => {
-        document.title = "JordanDG | Contact ";
-      }, []);
+        // Client-side only logic
+        setTitle("JordanDG | Contact");
+    }, []);
     return (
         <>
         <Head>
-            <title>{document.title}</title>
+            <title>{title}</title>
             <meta name="description" content="Contact me to discuss a new project - I look forward to your message!" />
             <link rel="icon" href="/favicon.ico" />
         </Head>

@@ -1,6 +1,6 @@
 "use client";
 
-import { Sheet, SheetClose, SheetContent, SheetTrigger } from '@/Components/ui/sheet';
+import { Sheet, SheetClose, SheetContent, SheetTrigger } from '@/Components/ui/sheet.jsx';
 import { usePathname } from 'next/navigation';
 import Link from 'next/link';
 import { CiMenuFries, ciMenuFries } from 'react-icons/ci';

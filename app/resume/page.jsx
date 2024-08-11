@@ -288,12 +288,12 @@ const Resume = () => {
                         </TabsContent>
                     </div>
                 </Tabs>
-                <a href='/JordanDaGracaCV2024.pdf' download='JordanDaGracaCV.pdf'>
+                {/* <a href='/JordanDaGracaCV2024.pdf' download='JordanDaGracaCV.pdf'>
                     <Button variant="outline" size="lg" className="uppercase flex items-center gap-2 w-full max-w-[380px] mx-auto xl:mx-0">
                         Download CV
                         <FiDownload className="text-xl" />
                     </Button>
-                </a>
+                </a> */}
             </div>
         </motion.div>
         </>

@@ -188,7 +188,7 @@ const Resume = () => {
     return (
         <>
         <Head>
-            <title>{document.title}</title>
+            <title>{title}</title>
             <meta name="description" content="View what I have to offer - my experience, education and skillsets." />
         </Head>
         <motion.div initial={{opacity: 0}} animate={{opacity: 1, transition: {delay: 2.4, duration: 0.4, ease: 'easeIn'}}} className='min-h-[80vh] flex items-center justify-center py-12 xl:py-0'>

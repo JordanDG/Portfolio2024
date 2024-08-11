@@ -49,7 +49,7 @@ const Services = () => {
     return (
         <>
         <Head>
-            <title>{document.title}</title>
+            <title>{title}</title>
             <meta name="description" content="These are the disciplines I specialise in." />
         </Head>
         <section className='min-h-[80vh] flex flex-col justify-center py-12 xl:py-0'>

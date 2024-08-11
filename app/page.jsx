@@ -23,7 +23,7 @@ const Home = () => {
   return (
     <>
     <Head>
-      <title>My page title</title>
+      <title>{title}</title>
       <meta name="description" content="The portfolio site for Jordan Da Graca, a self-taught web-developer from Southampton." />
     </Head>
     <section className="h-full">

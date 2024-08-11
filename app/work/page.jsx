@@ -1,5 +1,9 @@
 "use client";
 
+// Metadata Workaround
+import Head from "next/head";
+import { useEffect } from "react";
+
 // Animation
 import {easeIn, motion} from 'framer-motion';
 // Use state
@@ -68,7 +72,16 @@ const Work = () => {
         const currentIndex = swiper.activeIndex;
         setProject(projects[currentIndex]);
     }
+
+    useEffect(() => {
+        document.title = "JordanDG | Work ";
+      }, []);
     return (
+        <>
+        <Head>
+            <title>{document.title}</title>
+            <meta name="description" content="Check out some of the awesome work I've completed in the past." />
+        </Head>
         <motion.section initial={{opacity: 0}} animate={{opacity: 1, transition: {delay: 2.4, duration: 0.4, ease: 'easeIn'}}} className='min-h-[80vh] flex flex-col justify-center py-12 xl:px-0'>
             <div className="container mx-auto">
                 <div className='flex flex-col xl:flex-row xl:gap-[30px]'>
@@ -144,6 +157,7 @@ const Work = () => {
                 </div>
             </div>
         </motion.section>
+        </>
     )
 }
 

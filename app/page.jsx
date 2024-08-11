@@ -1,5 +1,11 @@
+"use client";
+
 import { Button } from "@/components/ui/button";
 import { FiDownload } from "react-icons/fi";
+
+// Metadata Workaround
+import Head from "next/head";
+import { useEffect } from "react";
 
 // Components //
 import Social from "@/components/Social";
@@ -8,7 +14,15 @@ import Stats from "@/components/Stats";
 import Competencies from "@/components/Competencies";
 
 const Home = () => {
+  useEffect(() => {
+    document.title = "JordanDG | Home ";
+  }, []);
   return (
+    <>
+    <Head>
+      <title>My page title</title>
+      <meta name="description" content="The portfolio site for Jordan Da Graca, a self-taught web-developer from Southampton." />
+    </Head>
     <section className="h-full">
       <div className="container mx-auto h-full">
         <div className="flex flex-col xl:flex-row items-center justify-between xl:pt-8 xl:pb-24">
@@ -39,6 +53,7 @@ const Home = () => {
       <Competencies />
       <Stats />
     </section>
+    </>
   )
 }
 

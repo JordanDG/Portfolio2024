@@ -1,5 +1,9 @@
 "use client";
 
+// Metadata Workaround
+import Head from "next/head";
+import { useEffect } from "react";
+
 // Icons
 import {FaHtml5, FaCss3, FaJs, FaReact, FaFigma, FaNodeJs, FaSass, FaWordpress, FaBuilding, FaGraduationCap, FaKeyboard, FaUser} from 'react-icons/fa';
 import {SiTailwindcss, SiNextdotjs, SiExpress, SiSqlite } from 'react-icons/si';
@@ -175,7 +179,15 @@ import { ScrollArea } from '@/components/ui/scroll-area';
 import { motion } from 'framer-motion';
 
 const Resume = () => {
+    useEffect(() => {
+        document.title = "JordanDG | Resume ";
+      }, []);
     return (
+        <>
+        <Head>
+            <title>{document.title}</title>
+            <meta name="description" content="View what I have to offer - my experience, education and skillsets." />
+        </Head>
         <motion.div initial={{opacity: 0}} animate={{opacity: 1, transition: {delay: 2.4, duration: 0.4, ease: 'easeIn'}}} className='min-h-[80vh] flex items-center justify-center py-12 xl:py-0'>
             <div className="container mx-auto">
                 <Tabs defaultValue='experience' className='flex flex-col xl:flex-row gap-[60px]'>
@@ -281,6 +293,7 @@ const Resume = () => {
                 </a>
             </div>
         </motion.div>
+        </>
     )
 }
 

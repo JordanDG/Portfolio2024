@@ -1,5 +1,9 @@
 "use client";
 
+// Metadata Workaround
+import Head from "next/head";
+import { useEffect } from "react";
+
 // Imports
 import { BsArrowDownRight } from 'react-icons/bs';
 import Link from 'next/link';
@@ -36,7 +40,15 @@ const services = [
 import { motion } from 'framer-motion';
 
 const Services = () => {
+    useEffect(() => {
+        document.title = "JordanDG | Services ";
+      }, []);
     return (
+        <>
+        <Head>
+            <title>{document.title}</title>
+            <meta name="description" content="These are the disciplines I specialise in." />
+        </Head>
         <section className='min-h-[80vh] flex flex-col justify-center py-12 xl:py-0'>
             <div className="container mx-auto">
                 <motion.h1 initial={{opacity: 0}} animate={{opacity: 1, transition: {delay: 1.8, duration: 0.4, ease: 'easeIn'}}} className='h1'>My Disciplines<span className="text-accent">.</span></motion.h1>
@@ -62,6 +74,7 @@ const Services = () => {
                 </motion.div>
             </div>
         </section>
+        </>
     )
 }
 

@@ -1,5 +1,9 @@
 "use client";
 
+// Metadata Workaround
+import Head from "next/head";
+import { useEffect } from "react";
+
 // Components
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -29,7 +33,16 @@ const info = [
 import { motion } from "framer-motion";
 
 const Contact = () => {
+    useEffect(() => {
+        document.title = "JordanDG | Contact ";
+      }, []);
     return (
+        <>
+        <Head>
+            <title>{document.title}</title>
+            <meta name="description" content="Contact me to discuss a new project - I look forward to your message!" />
+            <link rel="icon" href="/favicon.ico" />
+        </Head>
         <motion.section initial={{opacity: 0}} animate={{opacity: 1, transition: {delay: 2.4, duration: 0.4, ease: 'easeIn'}}} className="py-6">
             <div className="container mx-auto">
                 <div className="flex flex-col xl:flex-row gap-[30px]">
@@ -84,6 +97,7 @@ const Contact = () => {
                 </div>
             </div>
         </motion.section>
+        </>
     )
 }
 

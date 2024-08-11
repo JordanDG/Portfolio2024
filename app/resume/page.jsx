@@ -4,7 +4,7 @@
 import {FaHtml5, FaCss3, FaJs, FaReact, FaFigma, FaNodeJs, FaSass, FaWordpress, FaBuilding, FaGraduationCap, FaKeyboard, FaUser} from 'react-icons/fa';
 import {SiTailwindcss, SiNextdotjs, SiExpress, SiSqlite } from 'react-icons/si';
 import { SiAdobephotoshop, SiAdobexd, SiAdobepremierepro, SiAdobecreativecloud } from "react-icons/si";
-import { Button } from "@/components/ui/button";
+import { Button } from ''
 import { FiDownload } from "react-icons/fi";
 
 // About Data

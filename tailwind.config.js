@@ -29,8 +29,8 @@ module.exports = {
         accent: {
           // DEFAULT: '#4169e1',
           // hover: '#3454b4',
-          DEFAULT: '#ffffff',
-          hover: '#fafafa',
+          DEFAULT: '#5478e4',
+          hover: '#8da5ed',
         }
       },
       keyframes: {

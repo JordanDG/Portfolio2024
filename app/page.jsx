@@ -1,11 +1,5 @@
-"use client";
-
 import { Button } from "@/components/ui/button";
 import { FiDownload } from "react-icons/fi";
-
-// Metadata Workaround
-import Head from "next/head";
-import { useEffect, useState } from "react";
 
 // Components //
 import Social from "@/components/Social";
@@ -13,19 +7,13 @@ import Photo from "@/components/Photo";
 import Stats from "@/components/Stats";
 import Competencies from "@/components/Competencies";
 
-const Home = () => {
-  const [title, setTitle] = useState("");
+export const metadata = {
+  title: 'JordanDG | Home',
+  description: 'This is the portfolio site for Jordan Da Graca, a largely self-taught web designer and developer from Southampton, United Kingdom.',
+}
 
-  useEffect(() => {
-      // Client-side only logic
-      setTitle("JordanDG | Home");
-  }, []);
+const Home = () => {
   return (
-    <>
-    <Head>
-      <title>{title}</title>
-      <meta name="description" content="The portfolio site for Jordan Da Graca, a self-taught web-developer from Southampton." />
-    </Head>
     <section className="h-full">
       <div className="container mx-auto h-full">
         <div className="flex flex-col xl:flex-row items-center justify-between xl:pt-8 xl:pb-24">
@@ -56,7 +44,6 @@ const Home = () => {
       <Competencies />
       <Stats />
     </section>
-    </>
   )
 }
 

@@ -80,7 +80,7 @@ const Competencies = () => {
     return (
         <section className="w-screen">
             <div className="container mx-auto flex-col items-center justify-center xl:justify-start">
-                <h2 className="h2 pt-2 text-center xl:text-left">Proficiencies</h2>
+                <h2 className="h2 pt-2 text-center xl:text-left text-accent">Proficiencies</h2>
                 <motion.h3 initial={{opacity: 0}} animate={{opacity: 1, transition: {delay: 1.6, duration: 0.4, ease: 'easeIn'}}} className="h3 mt-2 mb-4 text-center xl:text-left">Development</motion.h3>
                 <motion.div initial={{opacity: 0}} animate={{opacity: 1, transition: {delay: 2, duration: 0.4, ease: 'easeIn'}}} className="flex items-center justify-center xl:justify-start w-full gap-x-8 gap-y-12 flex-wrap mb-12">
                     {Development.map((skill, index) => {

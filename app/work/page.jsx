@@ -1,11 +1,7 @@
 "use client";
 
-// Metadata Workaround
-import Head from "next/head";
-import { useEffect } from "react";
-
 // Animation
-import {easeIn, motion} from 'framer-motion';
+import { motion } from 'framer-motion';
 // Use state
 import React, { useState } from 'react';
 // Swiper component
@@ -72,19 +68,7 @@ const Work = () => {
         const currentIndex = swiper.activeIndex;
         setProject(projects[currentIndex]);
     }
-
-    const [title, setTitle] = useState("");
-
-    useEffect(() => {
-        // Client-side only logic
-        setTitle("JordanDG | Work");
-    }, []);
     return (
-        <>
-        <Head>
-            <title>{title}</title>
-            <meta name="description" content="Check out some of the awesome work I've completed in the past." />
-        </Head>
         <motion.section initial={{opacity: 0}} animate={{opacity: 1, transition: {delay: 2.4, duration: 0.4, ease: 'easeIn'}}} className='min-h-[80vh] flex flex-col justify-center py-12 xl:px-0'>
             <div className="container mx-auto">
                 <div className='flex flex-col xl:flex-row xl:gap-[30px]'>
@@ -160,7 +144,6 @@ const Work = () => {
                 </div>
             </div>
         </motion.section>
-        </>
     )
 }
 

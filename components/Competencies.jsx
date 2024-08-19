@@ -87,10 +87,10 @@ const Competencies = () => {
                         return <div key={index}>
                             <TooltipProvider delayDuration={100}>
                                 <Tooltip>
-                                    <TooltipTrigger className='w-full rounded-xl flex justify-center items-center group transition-all duration-500'>
+                                    <TooltipTrigger className='w-full rounded-xl flex justify-center items-center group transition-all duration-500' aria-describedby="Competency Tooltip">
                                         <div className='text-6xl group-hover:text-accent transition-all duration-300'>{skill.icon}</div>
                                     </TooltipTrigger>
-                                    <TooltipContent>
+                                    <TooltipContent role="tooltip">
                                         <p className='capitalize'>{skill.name}</p>
                                     </TooltipContent>
                                 </Tooltip>

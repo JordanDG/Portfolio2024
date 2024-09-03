@@ -9,7 +9,7 @@ const Dash = () => {
     return (
         <div>
             <p>{session?.user?.username}</p>
-            <button onClick={() => signOut()}>Logout</button>
+            <button onClick={() => signOut()}>Logout.</button>
         </div>
     )
 }

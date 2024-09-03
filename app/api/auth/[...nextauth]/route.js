@@ -12,24 +12,28 @@ export const authOptions = {
 
       async authorize(credentials) {
         const { username, password } = credentials;
+        console.log("Received credentials:", { username, password });
 
         try {
           await connectMongoDB();
           const user = await User.findOne({ username });
 
           if (!user) {
+            console.log("No user found with username:", username);
             return null;
           }
 
           const passwordsMatch = await bcrypt.compare(password, user.password);
 
           if (!passwordsMatch) {
+            console.log("Password does not match");
             return null;
           }
 
+          console.log("User authorized successfully");
           return user;
         } catch (error) {
-          console.log("Error: ", error);
+          console.log("Error during authorization:", error);
         }
       },
     }),
@@ -41,6 +45,7 @@ export const authOptions = {
   pages: {
     signIn: "/login",
   },
+  debug: true,
 };
 
 const handler = NextAuth(authOptions);

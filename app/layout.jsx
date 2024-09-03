@@ -1,5 +1,6 @@
 import { JetBrains_Mono } from "next/font/google";
 import "./globals.css";
+import { AuthProvider } from "./Providers";
 
 // Components //
 import Header from "@/components/Header";
@@ -16,11 +17,13 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={jetbrainsMono.variable}>
-        <Header />
-        <StairTransition />
-        <PageTransition>
-          {children}
-        </PageTransition>
+        <AuthProvider>
+          <Header />
+          <StairTransition />
+          <PageTransition>
+            {children}
+          </PageTransition>
+        </AuthProvider>
       </body>
     </html>
   );

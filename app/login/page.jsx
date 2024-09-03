@@ -70,6 +70,7 @@ const Login = (e) => {
 
             if (res.error) {
                 setErrorMsg("Invalid Credentials");
+                console.log(res.error);
                 return;
             }
 

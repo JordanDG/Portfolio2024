@@ -6,6 +6,10 @@ import Link from 'next/link';
 import { CiMenuFries, ciMenuFries } from 'react-icons/ci';
 import Social from './Social';
 
+// Check for session for rendering
+import { useSession } from 'next-auth/react';
+import { signOut } from "next-auth/react";
+
 // Components //
 
 
@@ -33,6 +37,7 @@ const links = [
 ]
 
 const MobileNav = () => {
+    const { data: session } = useSession();
     const pathname = usePathname();
     return (
         <Sheet>
@@ -58,6 +63,11 @@ const MobileNav = () => {
                         );
                     })}
                 </nav>
+                {session ? (
+                    <button onClick={() => signOut()} className='text-white text-[20px] bg-accent rounded-xl'>Logout</button>
+                ) : (
+                    <p>&nbsp;</p>
+                )}
                 <div className='absolute bottom-8 left-0 w-full h-8 flex justify-end items-center px-10 gap-8'>
                     <Social containerStyles="flex gap-6" iconStyles="w-9 h-9 border border-accent rounded-full flex justify-center items-center text-accent text-base hover:bg-accent hover:text-primary hover:transition-all duration-500" />
                 </div>

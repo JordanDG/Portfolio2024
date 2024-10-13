@@ -6,7 +6,7 @@ import { useEffect, useState } from "react";
 
 // Icons
 import {FaHtml5, FaCss3, FaJs, FaReact, FaFigma, FaNodeJs, FaSass, FaWordpress, FaBuilding, FaGraduationCap, FaKeyboard, FaUser} from 'react-icons/fa';
-import {SiTailwindcss, SiNextdotjs, SiExpress, SiSqlite } from 'react-icons/si';
+import {SiTailwindcss, SiNextdotjs, SiExpress, SiMysql } from 'react-icons/si';
 import { SiAdobephotoshop, SiAdobexd, SiAdobepremierepro, SiAdobecreativecloud } from "react-icons/si";
 import { Button } from '@/components/ui/button';
 import { FiDownload } from "react-icons/fi";
@@ -15,7 +15,7 @@ import { FiDownload } from "react-icons/fi";
 const about = {
     icon: <FaUser />,
     title: 'About Me',
-    description: 'All my details - where to find me, and how to speak to me :)',
+    description: 'About me - and how to get in touch with me about your next big project.',
     info: [
         {
             fieldName: 'Name',
@@ -23,11 +23,7 @@ const about = {
         },
         {
             fieldName: 'Phone',
-            fieldValue: '(+44) 7585 259237'
-        },
-        {
-            fieldName: 'Experience',
-            fieldValue: 'A lot ig'
+            fieldValue: <a class="hover:text-accent transition-all duration-300" href="tel:07585259237">+44 (0) 7585259237</a>
         },
         {
             fieldName: 'Discord',
@@ -39,11 +35,11 @@ const about = {
         },
         {
             fieldName: 'Email',
-            fieldValue: 'dagracajordan@gmail.com'
+            fieldValue: <a class="hover:text-accent transition-all duration-300" href="mailto:dagracajordan@gmail.com">dagracajordan@gmail.com</a>
         },
         {
             fieldName: 'Freelance',
-            fieldValue: 'Available'
+            fieldValue: <a class="text-red-400 hover:underline transition-all duration-300" href="/contact">Unavailable</a>
         },
         
     ]
@@ -61,14 +57,9 @@ const experience = {
             duration: 'Jan 2024 - Present'
         },
         {
-            company: 'Damteq Solutions Ltd.',
-            position: 'Junior Web Support Technician',
-            duration: 'Jan 2024 - Present'
-        },
-        {
-            company: 'Damteq Solutions Ltd.',
-            position: 'Junior Web Support Technician',
-            duration: 'Jan 2024 - Present'
+            company: 'Winchester Film Festival.',
+            position: 'Web Designer and Developer (Wordpress)',
+            duration: 'Jan 2017 - August 2018'
         },
     ]
 }
@@ -77,7 +68,7 @@ const experience = {
 const education = {
     icon: <FaGraduationCap />,
     title: 'My Education',
-    description: 'View my academic achievements here throughout undergraduate & beyond.',
+    description: 'View my academic accomplishments throughout both college and university.',
     items: [
         {
             institution: 'Solent University',
@@ -104,7 +95,7 @@ const education = {
 const skills = {
     icon: <FaKeyboard />,
     title: 'My Skills',
-    description: 'The big one - check out what I can bring to the table across both design and development.',
+    description: 'Here is what I can bring to the table for your project or business.',
     skillList: [
         {
             icon: <FaHtml5/>,
@@ -143,8 +134,8 @@ const skills = {
             name: 'Express.JS'
         },
         {
-            icon: <SiSqlite/>,
-            name: 'SQLite3'
+            icon: <SiMysql/>,
+            name: 'MySQL'
         },
         {
             icon: <FaFigma />,

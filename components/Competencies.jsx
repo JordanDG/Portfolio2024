@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import {FaHtml5, FaCss3, FaJs, FaReact, FaFigma, FaNodeJs, FaSass, FaWordpress} from 'react-icons/fa';
-import {SiTailwindcss, SiNextdotjs, SiExpress, SiSqlite } from 'react-icons/si';
+import {SiTailwindcss, SiNextdotjs, SiExpress, SiMysql } from 'react-icons/si';
 import { SiAdobephotoshop, SiAdobexd, SiAdobepremierepro, SiAdobecreativecloud } from "react-icons/si";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip'; 
 
@@ -67,8 +67,8 @@ const Development = [
         name: 'Express.JS'
     },
     {
-        icon: <SiSqlite/>,
-        name: 'SQLite3'
+        icon: <SiMysql/>,
+        name: 'MySQL'
     },
     {
         icon: <FaWordpress/>,

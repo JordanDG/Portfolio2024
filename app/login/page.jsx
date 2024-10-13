@@ -33,9 +33,9 @@ const Login = (e) => {
             //     },
             //     body: JSON.stringify({ username }),
             //   });
-        
+
             //   const { user } = await resUserExists.json();
-        
+
             //   if (user) {
             //     setErrorMsg("User already exists.");
             //     return;
@@ -70,7 +70,6 @@ const Login = (e) => {
 
             if (res.error) {
                 setErrorMsg("Invalid Credentials");
-                console.log(res.error);
                 return;
             }
 

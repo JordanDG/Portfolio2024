@@ -1,3 +1,5 @@
+"use client";
+
 import Link from "next/link";
 import { Button } from "./ui/button";
 
@@ -5,7 +7,14 @@ import { Button } from "./ui/button";
 import Nav from "./Nav";
 import MobileNav from "./MobileNav";
 
+// Check for session for rendering
+import { useSession } from 'next-auth/react';
+import { signOut } from "next-auth/react";
+
 const Header = () => {
+
+    const { data: session } = useSession();
+
     return (
         <header className="py-8 xl:py-12 text-white">
             <div className="container mx-auto flex justify-between items-center">
@@ -21,6 +30,11 @@ const Header = () => {
                     <Link href="/contact">
                         <Button name="Contact Button">Contact Me</Button>
                     </Link>
+                    {session ? (
+                        <button onClick={() => signOut()}>Logout</button>
+                    ) : (
+                        <p>&nbsp;</p>
+                    )}
                 </div>
 
                 {/* Mobile Nav */}

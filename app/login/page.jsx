@@ -73,7 +73,7 @@ const Login = (e) => {
                 return;
             }
 
-            router.replace("dash")
+            router.replace("dash");
         } catch (error) {
             console.log("Error during user registration.", error);
         }

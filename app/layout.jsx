@@ -6,12 +6,18 @@ import { AuthProvider } from "./Providers";
 import Header from "@/components/Header";
 import PageTransition from "@/components/PageTransition";
 import StairTransition from "@/components/StairTransition";
+// Metadata?
+import { Metadata } from "next";
 
 const jetbrainsMono = JetBrains_Mono({
   subsets: ["latin"],
   weight: ["100", "200", "300", "400", "500", "600", "700", "800"],
   variable: '--font-jetbrainsMono',
 });
+
+export const metadata = {
+    title: "JordanDG | Portfolio",
+};
 
 export default function RootLayout({ children }) {
   return (

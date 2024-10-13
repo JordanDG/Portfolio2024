@@ -12,7 +12,7 @@ import 'swiper/css/pagination';
 import { Pagination } from 'swiper/modules';
 // Iconography
 import {BsArrowUpRight, BsGithub} from 'react-icons/bs';
-import {FaHtml5, FaCss3, FaJs, FaReact, FaFigma, FaNodeJs} from 'react-icons/fa';
+import {FaCss3, FaJs, FaReact, FaFigma, FaNodeJs, FaHtml5} from 'react-icons/fa';
 import {SiTailwindcss, SiNextdotjs } from 'react-icons/si';
 // Tooltips
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
@@ -25,8 +25,8 @@ import WorkSliderBtns from '@/components/WorkSliderBtns';
 const projects = [
     {
         num: '01',
-        category: 'frontend',
-        title: 'project 1',
+        category: 'Coming Soon',
+        title: 'Coming Soon',
         description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum modi.',
         stack: [
             { name: 'HTML5', icon: <FaHtml5 /> }, { name: 'CSS3', icon: <FaCss3 /> }, { name: 'Javascript', icon: <FaJs /> }
@@ -37,8 +37,8 @@ const projects = [
     },
     {
         num: '02',
-        category: 'fullstack',
-        title: 'project 2',
+        category: 'Coming Soon',
+        title: 'Coming Soon',
         description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum modi.',
         stack: [
             { name: 'Next.JS', icon: <SiNextdotjs /> }, { name: 'Tailwind.CSS', icon: <SiTailwindcss /> }, { name: 'Node.JS', icon: <FaNodeJs /> }
@@ -49,11 +49,11 @@ const projects = [
     },
     {
         num: '03',
-        category: 'frontend',
-        title: 'project 3',
+        category: 'Coming Soon',
+        title: 'Coming Soon',
         description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum modi.',
         stack: [
-            { name: 'Next.JS', icon: <SiNextdotjs /> }, { name: 'Tailwind.CSS', icon: <SiTailwindcss /> }
+            { name: 'HTML5', icon: <FaHtml5 /> }, { name: 'Tailwind.CSS', icon: <SiTailwindcss /> }
         ],
         image: 'https://placehold.co/600x400.png',
         live: '',
@@ -79,7 +79,7 @@ const Work = () => {
                                 {project.num}<span>.</span>
                             </div>
                             {/* Project Category */}
-                            <h2 className='text-[42px] font-bold leading-none text-white group-hover:text-accent transition-all duration-500 capitalize'>{project.category} project</h2>
+                            <h2 className='text-[42px] font-bold leading-none text-white group-hover:text-accent transition-all duration-500 capitalize'>{project.category}</h2>
                             {/* Project Description */}
                             <p className='text-white/60'>{project.description}</p>
                             {/* Stack */}
